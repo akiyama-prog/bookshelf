@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+#background .jumbotron{
+    background:url(https://www.pakutaso.com/shared/img/thumb/ELL75_yousyohondana20120620_TP_V.jpg)center no-repeat;
+    background-size:cover;
+    color:#eae2e2;
+}
+
+#image .jumbotron{
+    background:url(https://cdn-ak.f.st-hatena.com/images/fotolife/N/Nina__NEWS/20190514/20190514192238.jpg)center no-repeat;
+    background-size:cover;
+}
+.navbar{
+    background-color:#3E2723;
+    }
+
+.navbar .navbar-brand{
+    color: white;
+}
+/*.navbar .navbar-nav li{
+    color:white;
+    display:inline-block;
+}*/
+
+.edit_button{
+    height:38px;
+    margin-left: 20px;
+}
+
+thead{
+    background:#e6dbdc;
+}
+
+body{
+    padding-top:80px;
+}
