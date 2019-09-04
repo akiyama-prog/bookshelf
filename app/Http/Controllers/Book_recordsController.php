@@ -79,7 +79,7 @@ class Book_recordsController extends Controller
             'content' => $content,
             'private_content' => $private_content,
         ]);
-        return back();
+        return redirect('/');
     }
     
     public function edit($id)
@@ -127,8 +127,10 @@ class Book_recordsController extends Controller
             $book_record->content = $content;
             $book_record->private_content = $private_content;
             $book_record->save();
+            
+            $user=User::find($id);
 
-            return redirect('/');        
+            return redirect('/');
     }
     public function destroy($id)
     {

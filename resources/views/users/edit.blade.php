@@ -11,12 +11,12 @@
             
             {!! Form::model($user,['route' => ['users.update',$user->id],'method' => 'put']) !!}
                 <div class="form-group">
-                    {!! Form::label('name','Name*') !!}
+                    {!! Form::label('name','Name') !!}
                     {!! Form::text('name',old('name'),['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('email', 'Email*') !!}
+                    {!! Form::label('email', 'Email') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
                 
