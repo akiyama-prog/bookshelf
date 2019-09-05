@@ -7,7 +7,9 @@
     <div class="card-body">
         <img class="rounded img-fluid" src="{{ Gravatar::src($user->email,500) }}" alt="">
         <div class="text-center">
+        @if($user->favorite_genres || $user->favorite_author)
         <p class="mt-3 mb-0 border-bottom">Favorites</p>
+        @endif
         @if($user->favorite_genres)
         <p class="mt-0 mb-0">{{ $user->favorite_genres }}</p>
         @endif

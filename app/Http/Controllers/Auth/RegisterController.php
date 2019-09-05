@@ -50,8 +50,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:users',
-            'favorite_genres' => 'required|string|max:191',
-            'favorite_author' => 'required|string|max:191',
+            'favorite_genres' => 'max:191',
+            'favorite_author' => 'max:191',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -64,6 +64,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
+        if($data['favorite_genres']===null){
+            $data['favorite_genres']="";
+                }
+        
+        if($data['favorite_author'] === null){
+            $data['favorite_author']="";
+        }
         
         return User::create([
             'name' => $data['name'],

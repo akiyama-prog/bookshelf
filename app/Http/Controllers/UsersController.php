@@ -44,15 +44,24 @@ class UsersController extends Controller
         $this->validate($request,[
             'name' => 'required|string|max:191',
             'email' => 'required|string|max:191',
-            'favorite_genres' => 'required|string|max:191',
-            'favorite_author' => 'required|string|max:191',
+            'favorite_genres' => 'max:191',
+            'favorite_author' => 'max:191',
             ]);
+            
+        $favorite_genres = $request->favorite_genres;
+            if($favorite_genres === null){
+            $favorite_genres="";
+        }
+        $favorite_author = $request->favorite_author;
+        if($favorite_author === null){
+            $favorite_author="";
+        }
             
         $user=User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->favorite_genres = $request->favorite_genres;
-        $user->favorite_author = $request->favorite_author;
+        $user->favorite_genres = $favorite_genres;
+        $user->favorite_author = $favorite_author;
         $user->save();
         
         return redirect('/');

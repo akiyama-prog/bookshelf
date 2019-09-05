@@ -11,22 +11,22 @@
             
             {!! Form::model($user,['route' => ['users.update',$user->id],'method' => 'put']) !!}
                 <div class="form-group">
-                    {!! Form::label('name','Name') !!}
+                    {!! Form::label('name','Name*') !!}
                     {!! Form::text('name',old('name'),['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('email', 'Email') !!}
+                    {!! Form::label('email', 'Email*') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('favorite_genres','Favorite genres') !!}
+                    {!! Form::label('favorite_genres','Favorite genres: 好きなジャンル') !!}
                     {!! Form::text('favorite_genres',old('favorite_genres'),['class' => 'form-control']) !!}
                  </div>
 
                 <div class="form-group">
-                    {!! Form::label('favorite_author','Favorite author') !!}
+                    {!! Form::label('favorite_author','Favorite author: 好きな作家') !!}
                     {!! Form::text('favorite_author',old('favorite_author'),['class' => 'form-control']) !!}
                 </div>
                 
