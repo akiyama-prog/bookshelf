@@ -3,10 +3,10 @@
     <img class="rounded img-fluid" src="{{ Gravatar::src($user->email,100) }}" alt="">
     <h4 class="mt-3">{{ $user->name }}</h4>
     
-    @if(Auth::user()->favorite_genres)
+    @if($user->favorite_genres)
         <p>Favorite genres: {{ $user->favorite_genres }}</p>
     @endif
-    @if(Auth::user()->favorite_author)
+    @if($user->favorite_author)
         <p>Favorite author: {{ $user->favorite_author }}</p>
     @endif
     
